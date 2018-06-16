@@ -1,0 +1,35 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+.form-brf {
+  max-width: 350px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-brf .form-brf-heading {
+  margin-bottom: 10px;
+}
+
+.form-brf .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-brf .form-control:focus {
+  z-index: 2;
+}
+.form-brf input[type="date"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}

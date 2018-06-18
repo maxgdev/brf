@@ -28,9 +28,7 @@
     <link data-brackets-id='40' href="brf.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/6BBF72C7-776E-B146-867A-D642A21417F4/main.js" charset="UTF-8"></script><script data-brackets-id='41' src="assets/js/ie-emulation-modes-warning.js"></script>
-
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![<script data-brackets-id='41' src="assets/js/ie-emulation-modes-warning.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -45,8 +43,8 @@
       <form data-brackets-id='44' class="form-brf">
         <h2 data-brackets-id='45' class="form-brf-heading">BioRythm Fertility App</h2>
         <label data-brackets-id='46' for="inputOvuDate" class="sr-only">Ovulation Start Date</label>
-        <input data-brackets-id='47' type="date" id="inputOvuDate" class="form-control" placeholder="" required autofocus>
-        <button data-brackets-id='48' class="btn btn-lg btn-primary btn-block" type="submit">Calculate</button>
+        <input data-brackets-id='47' type="date" id="startDate" class="form-control" placeholder="" required autofocus>
+        <button data-brackets-id='48' class="btn btn-lg btn-primary btn-block" type=""  onclick="mtest()">Calculate</button>
       </form>
       <div id="brfOutput">
       <h3>Output area</h3>
@@ -61,5 +59,8 @@
     <script data-brackets-id='50' src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script data-brackets-id='51' src="js/bootstrap.min.js"></script>
+    <!-- Load moment.js for Date reliable Date manipulation  -->
+    <script data-brackets-id='51' src="js/moment.min.js"></script>
+    <script src="brfapp.js"></script>
   </body>
 </html>

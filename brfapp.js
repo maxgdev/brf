@@ -31,17 +31,24 @@ function calcFertilePeriod(){
 	var startDateVal = new Date(startDateEl.value);
 	// convert date to moment object
 	var momentStartDate = moment(startDateVal);
-	// add 9 and 14 days to get fertile period
+	var girlTime; // 9 - 12 days (pre Ovulation)
+	// add 9 and 5 days to get fertile period
 	var day9OfCycle = momentStartDate.add(9, 'd').format('YYYY-MM-DD');
 	var day14OfCycle = momentStartDate.add(5, 'd').format('YYYY-MM-DD');
+	var boyTime; // 15 - 18 days (post Ovulation)
 	// display fertile period as calender correct calender dates
 	mylog(day9OfCycle, ' 9th Day of Cycle ');
 	alert(day9OfCycle + " 9th Day of Cycle ")
 	mylog(day14OfCycle, ' 14th Day of Cycle ');
 	alert(day14OfCycle + " 14th Day of Cycle ");
+	displayCycle('9th Day of Cycle is: ', day9OfCycle);
 	
 }
 
+function displayCycle(text, value){
+	 var output = document.getElementById("brfOutput");
+	output.innerHTML = '<h2>' + text + value + '</h2>';
+}
 // my Diagnostic log function
 function mylog(content, comment){
 	console.log("-------"+comment+"--------");

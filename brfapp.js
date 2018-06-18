@@ -17,27 +17,29 @@ function calcFertilePeriod(){
 	
 	https://pregnancy.lovetoknow.com/wiki/How_Long_After_Your_Period_Can_You_Get_Pregnant
 	
+	Gender probability
+	Girl: 9 - 12 days (pre Ovulation)
+	Boy:  15 - 18 days (post Ovulation)
+	Safe Periods:
+		Days 6 - 8
+		Days 18 - 28
+		
 	*/
 	
 	// Get user selected date
+	var startDateEl = document.getElementById("startDate");
+	var startDateVal = new Date(startDateEl.value);
 	// convert date to moment object
+	var momentStartDate = moment(startDateVal);
 	// add 9 and 14 days to get fertile period
+	var day9OfCycle = momentStartDate.add(9, 'd').format('YYYY-MM-DD');
+	var day14OfCycle = momentStartDate.add(5, 'd').format('YYYY-MM-DD');
 	// display fertile period as calender correct calender dates
-
-}
-// Function to test moment.js
-function mtest(){
-	var x = document.getElementById("startDate");
-	var tempDate = new Date(x.value);
-	var dayWrapper = moment(tempDate); 
-	mylog(tempDate, 'Temp Date');
-	alert(tempDate, 'Temp Date');
-	// Output
-	// Temp Date:  Sun Jun 10 2018 01:00:00 GMT+0100 (British Summer Time)
-	mylog(dayWrapper.format('YYYY-MM-DD'), 'Moment Day Wrapper');
-	var future = dayWrapper.add(10, 'd');
-	mylog(future.format('YYYY-MM-DD'), 'future = dayWrapper+10');
-	alert(future, 'future = dayWrapper+10');
+	mylog(day9OfCycle, ' 9th Day of Cycle ');
+	alert(day9OfCycle + " 9th Day of Cycle ")
+	mylog(day14OfCycle, ' 14th Day of Cycle ');
+	alert(day14OfCycle + " 14th Day of Cycle ");
+	
 }
 
 // my Diagnostic log function
